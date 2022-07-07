@@ -7,5 +7,5 @@ export class Postagem {
     public texto: string;
     public data: Date;
     public tema: Tema;
-    public usuario: Usuario
+    public usuario: Usuario;
 }
