@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+
+            <h1>testes</h1>
+        </div>
+        <div class="col-md-12">
+
+            <div class="card-columns" *ngFor="let tema of listaTemas">
+                <div class="card text-center" *ngFor='let item of tema.postagem'>
+                  <div class="card-body">
+                    <h5 class="card-title m-0">{{item.titulo}}</h5>
+                    <p class="card-text mt-3">{{item.texto}}</p>
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
