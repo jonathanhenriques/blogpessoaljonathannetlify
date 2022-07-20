@@ -20,6 +20,7 @@ import { TestesComponent } from './testes/testes.component';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { AlertaComponent } from './alerta/alerta.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     TestesComponent,
     PostagemEditComponent,
     PostagemDeleteComponent,
-    UsuarioEditComponent
+    UsuarioEditComponent,
+    AlertaComponent
   ],
   imports: [
     BrowserModule,
