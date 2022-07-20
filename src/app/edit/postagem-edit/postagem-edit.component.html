@@ -11,15 +11,18 @@
                 <label for="titulo">Título</label>
                 <input [(ngModel)]="postagem.titulo" type="text" class="form-control" id="titulo"
                     placeholder="Digite um título">
+                    <small>*mínimo 5 caracteres</small>
             </div>
             <div class="form-group">
                 <label for="texto">Texto</label>
                 <textarea [(ngModel)]="postagem.texto" class="form-control" name="texto" id="texto" rows="3"></textarea>
+                <small>*mínimo 10 caracteres</small>
             </div>
             <div class="form-group">
                 <label for="tema">Escolha um tema ou <a data-dismiss="modal" routerLink="/tema">cadastre um
                         novo:</a></label>
                 <select [(ngModel)]="idTema" (change)="findByIdTema()" class="form-control" name="tema" id="tema">
+                    <option value="">escolha...</option>
                     <option *ngFor="let i of listaTemas" value="{{i.id}}">{{i.descricao}}</option>
                 </select>
             </div>

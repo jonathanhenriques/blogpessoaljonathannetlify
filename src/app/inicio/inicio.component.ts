@@ -20,7 +20,6 @@ export class InicioComponent implements OnInit {
   tema: Tema = new Tema();
   listaTemas: Tema[];
   idTema: number;
-
   usuario: Usuario = new Usuario();
   idUsuario = environment.id;
   
@@ -34,6 +33,7 @@ export class InicioComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0);
     if (environment.token == '')
       this.router.navigate(['/entrar'])
 
@@ -73,7 +73,7 @@ export class InicioComponent implements OnInit {
     this.usuario.id = this.idUsuario;
     this.postagem.usuario = this.usuario;
 
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: any)  => {
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem)  => {
       this.postagem = resp
       
       alert('Postagem realizada com sucesso!')
